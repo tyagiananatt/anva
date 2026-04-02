@@ -96,11 +96,33 @@ const journey = [
   { year: 'Now', text: 'Building the future — AI-powered solutions and beyond', color: 'var(--orange)' },
 ];
 
+// Premium SVG icons
+const IconKey = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="7.5" cy="15.5" r="5.5"/><path d="M21 2l-9.6 9.6"/><path d="M15.5 7.5l3 3L21 8l-3-3"/>
+  </svg>
+);
+const IconRefresh = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/>
+  </svg>
+);
+const IconZap = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+  </svg>
+);
+const IconShield = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+  </svg>
+);
+
 const values = [
-  { title: 'You Own Everything', desc: 'Code, domain, data — it\'s all yours. No lock-in, ever.', emoji: '🔑' },
-  { title: 'Weekly Updates', desc: 'Agile delivery with demos every week so you\'re always in the loop.', emoji: '📡' },
-  { title: 'Built to Perform', desc: 'We don\'t just design pretty — we engineer fast, scalable products.', emoji: '⚡' },
-  { title: 'Support Included', desc: 'Post-launch support comes standard. We don\'t disappear after delivery.', emoji: '🛡️' },
+  { title: 'You Own Everything', desc: "Code, domain, data — it's all yours. No lock-in, ever.", Icon: IconKey, color: 'var(--orange)' },
+  { title: 'Weekly Updates', desc: 'Agile delivery with demos every week so you\'re always in the loop.', Icon: IconRefresh, color: '#60A5FA' },
+  { title: 'Built to Perform', desc: "We don't just design pretty — we engineer fast, scalable products.", Icon: IconZap, color: '#F59E0B' },
+  { title: 'Support Included', desc: "Post-launch support comes standard. We don't disappear after delivery.", Icon: IconShield, color: '#22C55E' },
 ];
 
 // Bubble
@@ -352,25 +374,27 @@ export default function About() {
                   whileHover={{ x: 6 }}
                 >
                   <div className="ab-vc-left">
-                    <motion.span
-                      className="ab-vc-emoji"
-                      animate={hoveredValue === i ? { scale: [1, 1.2, 1], rotate: [0, 10, -10, 0] } : {}}
-                      transition={{ duration: 0.5 }}
+                    <motion.div
+                      className="ab-vc-icon"
+                      style={{ color: v.color }}
+                      animate={hoveredValue === i ? { scale: [1, 1.15, 1], rotate: [0, 8, -8, 0] } : { scale: 1, rotate: 0 }}
+                      transition={{ duration: 0.45, ease: 'easeInOut' }}
                     >
-                      {v.emoji}
-                    </motion.span>
+                      <v.Icon />
+                    </motion.div>
                     <div className="ab-vc-connector" />
                   </div>
                   <div className="ab-vc-content">
                     <h4 className="ab-vc-title">{v.title}</h4>
-                    <AnimatePresence>
+                    <AnimatePresence initial={false}>
                       {hoveredValue === i && (
                         <motion.p
                           className="ab-vc-desc"
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                          initial={{ height: 0, opacity: 0, marginTop: 0 }}
+                          animate={{ height: 'auto', opacity: 1, marginTop: 6 }}
+                          exit={{ height: 0, opacity: 0, marginTop: 0 }}
+                          transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                          style={{ overflow: 'hidden' }}
                         >
                           {v.desc}
                         </motion.p>
@@ -711,10 +735,23 @@ export default function About() {
           gap: 0;
           padding-top: 2px;
         }
-        .ab-vc-emoji {
-          font-size: 22px;
-          display: block;
-          line-height: 1;
+        .ab-vc-icon {
+          width: 36px;
+          height: 36px;
+          border-radius: 10px;
+          background: rgba(255,255,255,0.04);
+          border: 1px solid rgba(255,255,255,0.07);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+          transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .ab-vc-active .ab-vc-icon,
+        .ab-value-card:hover .ab-vc-icon {
+          background: rgba(249,115,22,0.08);
+          border-color: rgba(249,115,22,0.2);
+          box-shadow: 0 0 16px rgba(249,115,22,0.12);
         }
         .ab-vc-connector {
           width: 1px;
@@ -854,7 +891,8 @@ export default function About() {
           .ab-quote-sub { font-size: 13.5px; }
 
           .ab-value-card { padding: 12px 12px; gap: 12px; }
-          .ab-vc-emoji { font-size: 18px; }
+          .ab-vc-icon { width: 30px; height: 30px; border-radius: 8px; }
+          .ab-vc-icon svg { width: 16px; height: 16px; }
           .ab-vc-title { font-size: 13.5px; }
           .ab-vc-desc { font-size: 12px; }
 
