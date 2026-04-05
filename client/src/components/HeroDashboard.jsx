@@ -96,7 +96,7 @@
 //             ))}
 //           </div>
 //           <div style={{ flex: 1, background: 'rgba(255,255,255,0.05)', borderRadius: 6, padding: '4px 14px', fontSize: 12, color: '#525252', textAlign: 'center' }}>
-//             vaantech.com
+//             ANVA web solutions.com
 //           </div>
 //           <div style={{ display: 'flex', gap: 8 }}>
 //             {['⊞', '⊡', '↗'].map((ic, i) => (
@@ -405,7 +405,7 @@ export default function HeroDashboard() {
             border: '1px solid rgba(255,255,255,0.025)',
           }}>
             <span style={{ color: '#22C55E', fontSize: 9 }}>🔒</span>
-            vaantech.com/analytics
+            ANVA web solutions.com/analytics
           </div>
           <span style={{ fontSize: 9, color: '#1E1E1E', fontFamily: 'monospace' }}>
             {time.toLocaleTimeString()}
@@ -426,7 +426,7 @@ export default function HeroDashboard() {
               fontSize: 11, fontWeight: 900, color: 'white',
               boxShadow: '0 2px 8px rgba(249,115,22,0.3)',
             }}>V</div>
-            <span style={{ fontSize: 13, fontWeight: 800, color: 'white', letterSpacing: '-0.01em' }}>VaanTech Analytics</span>
+            <span style={{ fontSize: 13, fontWeight: 800, color: 'white', letterSpacing: '-0.01em' }}>ANVA web solutions Analytics</span>
             <span style={{ width: 1, height: 14, background: 'rgba(255,255,255,0.06)' }} />
             <span style={{ fontSize: 10, color: '#303030' }}>Performance Monitor</span>
           </div>
@@ -604,7 +604,7 @@ export default function HeroDashboard() {
             <span style={{ fontSize: 10, color: '#303030', fontFamily: 'monospace' }}>4s refresh</span>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-            <span style={{ fontSize: 9, color: '#252525' }}>Powered by VaanTech</span>
+            <span style={{ fontSize: 9, color: '#252525' }}>Powered by ANVA web solutions</span>
           </div>
         </div>
       </div>

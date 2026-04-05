@@ -10,11 +10,11 @@
 // ];
 
 // const testimonials = [
-//   { quote: "Our team works in a fast-moving environment, and priorities change all the time. Vaan Tech keeps everyone aligned by delivering exactly what we need, when we need it.", name: 'Noah', role: 'Operations Manager', avatar: 0 },
+//   { quote: "Our team works in a fast-moving environment, and priorities change all the time. ANVA web solutions keeps everyone aligned by delivering exactly what we need, when we need it.", name: 'Noah', role: 'Operations Manager', avatar: 0 },
 //   { quote: "Workload feels more balanced across the team, and we spend less time re-planning. The website they built handles everything automatically.", name: 'Ridho', role: 'Team Lead', avatar: 1 },
-//   { quote: "What surprised me most is how much mental energy I used to spend on planning. With Vaan Tech handling the digital side, I can move straight into execution.", name: 'Edward', role: 'Corporate Director', avatar: 2 },
-//   { quote: "The AI now handles that part for me by organizing tasks and highlighting real priorities. Vaan Tech built exactly what we needed.", name: 'Sarah', role: 'Product Manager', avatar: 3 },
-//   { quote: "I had no idea what I needed — just that my old website was embarrassing. Vaan Tech walked me through everything and delivered something I'm genuinely proud to show people.", name: 'Priya', role: 'Founder, ClearCare', avatar: 4 },
+//   { quote: "What surprised me most is how much mental energy I used to spend on planning. With ANVA web solutions handling the digital side, I can move straight into execution.", name: 'Edward', role: 'Corporate Director', avatar: 2 },
+//   { quote: "The AI now handles that part for me by organizing tasks and highlighting real priorities. ANVA web solutions built exactly what we needed.", name: 'Sarah', role: 'Product Manager', avatar: 3 },
+//   { quote: "I had no idea what I needed — just that my old website was embarrassing. ANVA web solutions walked me through everything and delivered something I'm genuinely proud to show people.", name: 'Priya', role: 'Founder, ClearCare', avatar: 4 },
 // ];
 
 // export default function Testimonials() {
@@ -32,7 +32,7 @@
 //             <span style={{ color: 'var(--text2)' }}>Who Value Focus</span>
 //           </h2>
 //           <p style={{ color: 'var(--text2)', maxWidth: 520, margin: '0 auto', fontSize: '1.05rem', lineHeight: 1.8 }}>
-//             From solo professionals to growing teams, people rely on Vaan Tech to stay organized, focused, and productive.
+//             From solo professionals to growing teams, people rely on ANVA web solutions to stay organized, focused, and productive.
 //           </p>
 //         </motion.div>
 
@@ -76,7 +76,7 @@ const avatars = [
 
 const testimonials = [
   {
-    quote: "Our team works in a fast-moving environment, and priorities change all the time. Vaan Tech keeps everyone aligned by delivering exactly what we need, when we need it.",
+    quote: "Our team works in a fast-moving environment, and priorities change all the time. ANVA web solutions keeps everyone aligned by delivering exactly what we need, when we need it.",
     name: 'Noah',
     role: 'Operations Manager',
     company: 'ScaleUp Inc.',
@@ -94,7 +94,7 @@ const testimonials = [
     color: '#60A5FA',
   },
   {
-    quote: "What surprised me most is how much mental energy I used to spend on planning. With Vaan Tech handling the digital side, I can move straight into execution.",
+    quote: "What surprised me most is how much mental energy I used to spend on planning. With ANVA web solutions handling the digital side, I can move straight into execution.",
     name: 'Edward',
     role: 'Corporate Director',
     company: 'NovaCorp',
@@ -103,7 +103,7 @@ const testimonials = [
     color: '#22C55E',
   },
   {
-    quote: "The system now handles that part for me by organizing tasks and highlighting real priorities. Vaan Tech built exactly what we needed.",
+    quote: "The system now handles that part for me by organizing tasks and highlighting real priorities. ANVA web solutions built exactly what we needed.",
     name: 'Sarah',
     role: 'Product Manager',
     company: 'Telepath',
@@ -112,7 +112,7 @@ const testimonials = [
     color: '#A78BFA',
   },
   {
-    quote: "I had no idea what I needed — just that my old website was embarrassing. Vaan Tech walked me through everything and delivered something I'm genuinely proud to show people.",
+    quote: "I had no idea what I needed — just that my old website was embarrassing. ANVA web solutions walked me through everything and delivered something I'm genuinely proud to show people.",
     name: 'Priya',
     role: 'Founder',
     company: 'ClearCare',
@@ -203,7 +203,7 @@ export default function Testimonials() {
             <span style={{ color: 'var(--text2)' }}>Who Value Focus</span>
           </h2>
           <p style={{ color: 'var(--text2)', maxWidth: 520, margin: '0 auto', fontSize: '1.05rem', lineHeight: 1.8 }}>
-            From solo professionals to growing teams, people rely on Vaan Tech to stay organized, focused, and productive.
+            From solo professionals to growing teams, people rely on ANVA web solutions to stay organized, focused, and productive.
           </p>
         </motion.div>
 

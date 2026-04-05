@@ -59,7 +59,7 @@ export default function Hero() {
           {...f(0.2)}
           style={{ fontSize: '1.15rem', color: 'var(--text2)', lineHeight: 1.8, maxWidth: 560, margin: '0 auto 44px', fontWeight: 400 }}
         >
-          Vaan Tech designs and builds professional websites, web apps, and business systems for startups and growing companies — no tech knowledge needed.
+          ANVA web solutions designs and builds professional websites, web apps, and business systems for startups and growing companies — no tech knowledge needed.
         </motion.p>
 
         <motion.div {...f(0.3)} style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap', marginBottom: 80 }}>

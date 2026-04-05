@@ -321,22 +321,14 @@ export default function Navbar() {
       >
         <div
           style={{
-            background: scrolled
-              ? 'rgba(14,14,14,0.88)'
-              : 'rgba(14,14,14,0.5)',
-            backdropFilter: 'blur(24px)',
-            WebkitBackdropFilter: 'blur(24px)',
-            borderBottom: scrolled
-              ? '1px solid rgba(255,255,255,0.07)'
-              : '1px solid transparent',
+            background: 'var(--bg)',
+            borderBottom: '1px solid var(--border)',
             padding: '0 32px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
             height: 64,
             width: '100%',
-            boxShadow: scrolled ? '0 4px 32px rgba(0,0,0,0.4)' : 'none',
-            transition: 'background 0.3s ease, border-bottom 0.3s ease, box-shadow 0.3s ease',
           }}
         >
           {/* Logo */}
@@ -357,17 +349,11 @@ export default function Navbar() {
                 width: 30,
                 height: 30,
                 borderRadius: '50%',
-                background: 'var(--orange)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: 13,
-                fontWeight: 900,
-                color: 'white',
-                boxShadow: '0 0 12px rgba(249,115,22,0.5)',
+                overflow: 'hidden',
+                flexShrink: 0,
               }}
             >
-              V
+              <img src="/logo.png" alt="ANVA logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <span
               style={{
@@ -378,7 +364,7 @@ export default function Navbar() {
                 fontFamily: "'Syne', sans-serif",
               }}
             >
-              Vaan Tech
+              <span style={{ color: 'var(--orange)' }}>ANVA</span> web solutions
             </span>
           </motion.div>
 
@@ -399,14 +385,6 @@ export default function Navbar() {
                   <button
                     key={l.to}
                     onClick={() => handleNav(l.to)}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.color = 'white';
-                    }}
-                    onMouseLeave={(e) => {
-                      if (!isActive) {
-                        e.currentTarget.style.color = 'rgba(255,255,255,0.5)';
-                      }
-                    }}
                     style={{
                       position: 'relative',
                       padding: '7px 15px',
@@ -417,33 +395,14 @@ export default function Navbar() {
                       background: 'none',
                       border: 'none',
                       borderRadius: 50,
-                      /* KEY FIX: removed CSS transition entirely —
-                         it was fighting with Framer Motion's layoutId */
                       fontFamily: 'Inter, sans-serif',
                       outline: 'none',
+                      transition: 'color 0.25s ease',
                     }}
+                    onMouseEnter={(e) => { if (!isActive) e.currentTarget.style.color = 'rgba(255,255,255,0.85)'; }}
+                    onMouseLeave={(e) => { if (!isActive) e.currentTarget.style.color = 'rgba(255,255,255,0.5)'; }}
                   >
-                    {/* Active pill bg */}
-                    {isActive && (
-                      <motion.div
-                        layoutId="nav-active"
-                        style={{
-                          position: 'absolute',
-                          inset: 0,
-                          background: 'rgba(255,255,255,0.08)',
-                          borderRadius: 50,
-                          border: '1px solid rgba(255,255,255,0.1)',
-                        }}
-                        /* KEY FIX: use tween instead of spring for
-                           predictable, smooth movement */
-                        transition={{
-                          type: 'spring',
-                          stiffness: 500,
-                          damping: 35,
-                          mass: 0.8,
-                        }}
-                      />
-                    )}
+
                     <span style={{ position: 'relative', zIndex: 1 }}>
                       {l.label}
                     </span>

@@ -52,8 +52,10 @@ export default function Footer() {
           <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: 48, marginBottom: 48 }} className="footer-cols">
             <div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20 }}>
-                <div style={{ width: 32, height: 32, borderRadius: '50%', background: 'var(--orange)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 14, fontWeight: 900, color: 'white' }}>V</div>
-                <span style={{ fontWeight: 700, fontSize: 17, color: 'white', letterSpacing: '-0.02em' }}>Vaan Tech</span>
+                <div style={{ width: 32, height: 32, borderRadius: '50%', overflow: 'hidden', flexShrink: 0 }}>
+                  <img src="/logo.png" alt="ANVA logo" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                </div>
+                <span style={{ fontWeight: 700, fontSize: 17, color: 'white', letterSpacing: '-0.02em' }}><span style={{ color: 'var(--orange)' }}>ANVA</span> web solutions</span>
               </div>
               <p style={{ color: 'var(--text3)', fontSize: 14, lineHeight: 1.8, maxWidth: 260, marginBottom: 28 }}>
                 Building professional websites and digital solutions for businesses of all sizes.
@@ -71,7 +73,7 @@ export default function Footer() {
             {[
               { title: 'Product', links: ['Web Development', 'E-Commerce', 'Mobile Apps', 'UI/UX Design', 'SEO'] },
               { title: 'Company', links: ['About', 'Our Work', 'Process', 'Pricing', 'Blog'] },
-              { title: 'Resource', links: ['Get a Quote', 'hello@vaantech.com', '+1 (555) 123-4567', 'San Francisco, CA'] },
+              { title: 'Resource', links: ['Get a Quote', 'hello@anvawebsolutions.com', '+1 (555) 123-4567', 'San Francisco, CA'] },
             ].map(col => (
               <div key={col.title}>
                 <h4 style={{ fontSize: 12, fontWeight: 700, color: 'var(--text3)', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 20 }}>{col.title}</h4>
@@ -87,7 +89,7 @@ export default function Footer() {
           </div>
 
           <div style={{ borderTop: '1px solid var(--border)', paddingTop: 28, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 16 }}>
-            <p style={{ color: 'var(--text3)', fontSize: 13 }}>© 2026 Vaan Tech. All rights reserved.</p>
+            <p style={{ color: 'var(--text3)', fontSize: 13 }}>© 2026 ANVA web solutions. All rights reserved.</p>
             <div style={{ display: 'flex', gap: 24 }}>
               {['Privacy Policy', 'Terms of Service'].map(l => (
                 <a key={l} href="#" style={{ color: 'var(--text3)', fontSize: 13, textDecoration: 'none' }}>{l}</a>

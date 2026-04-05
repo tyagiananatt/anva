@@ -82,7 +82,7 @@ const posts = [
     readTime: '5 min',
     img: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=700&q=80',
     color: '#F97316',
-    author: 'Vaan Tech Team',
+    author: 'ANVA web solutions Team',
   },
   {
     title: 'Do you actually need a mobile app, or will a website do?',
@@ -92,7 +92,7 @@ const posts = [
     readTime: '4 min',
     img: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=700&q=80',
     color: '#60A5FA',
-    author: 'Vaan Tech Team',
+    author: 'ANVA web solutions Team',
   },
   {
     title: 'How to rank on Google in 2026 without spending a fortune',
@@ -102,7 +102,7 @@ const posts = [
     readTime: '7 min',
     img: 'https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=700&q=80',
     color: '#22C55E',
-    author: 'Vaan Tech Team',
+    author: 'ANVA web solutions Team',
   },
 ];
 

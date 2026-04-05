@@ -45,7 +45,7 @@
 //               <img src={CONTACT_IMG} alt="Contact" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.8 }} />
 //               <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(249,115,22,0.1), transparent)', borderRadius: 20 }} />
 //             </div>
-//             {[{ icon: <FiMail />, label: 'Email', value: 'hello@vaantech.com', c: 'var(--orange)' }, { icon: <FiPhone />, label: 'Phone', value: '+1 (555) 123-4567', c: '#22C55E' }, { icon: <FiClock />, label: 'Response time', value: 'Within 24 hours', c: '#60A5FA' }].map(item => (
+//             {[{ icon: <FiMail />, label: 'Email', value: 'hello@anvawebsolutions.com', c: 'var(--orange)' }, { icon: <FiPhone />, label: 'Phone', value: '+1 (555) 123-4567', c: '#22C55E' }, { icon: <FiClock />, label: 'Response time', value: 'Within 24 hours', c: '#60A5FA' }].map(item => (
 //               <div key={item.label} style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 18 }}>
 //                 <div style={{ width: 40, height: 40, borderRadius: 10, background: `${item.c}15`, border: `1px solid ${item.c}30`, display: 'flex', alignItems: 'center', justifyContent: 'center', color: item.c, fontSize: 16, flexShrink: 0 }}>{item.icon}</div>
 //                 <div>
@@ -97,7 +97,7 @@
 //                   <motion.button type="submit" className="btn btn-orange" whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} disabled={status === 'loading'} style={{ width: '100%', justifyContent: 'center', fontSize: 15, padding: '15px 28px' }}>
 //                     {status === 'loading' ? 'Sending...' : <><FiArrowRight /> Send Message</>}
 //                   </motion.button>
-//                   {status === 'error' && <p style={{ color: '#EF4444', textAlign: 'center', marginTop: 14, fontSize: 14 }}>Something went wrong. Email us at hello@vaantech.com</p>}
+//                   {status === 'error' && <p style={{ color: '#EF4444', textAlign: 'center', marginTop: 14, fontSize: 14 }}>Something went wrong. Email us at hello@anvawebsolutions.com</p>}
 //                 </form>
 //               )}
 //             </div>
@@ -184,7 +184,7 @@ export default function Contact() {
   };
 
   const contactInfo = [
-    { icon: <FiMail size={15} />, label: 'Email', value: 'hello@vaantech.com', color: 'var(--orange)' },
+    { icon: <FiMail size={15} />, label: 'Email', value: 'hello@anvawebsolutions.com', color: 'var(--orange)' },
     { icon: <FiPhone size={15} />, label: 'Phone', value: '+1 (555) 123-4567', color: '#22C55E' },
     { icon: <FiClock size={15} />, label: 'Response', value: 'Within 24 hours', color: '#60A5FA' },
     { icon: <FiMapPin size={15} />, label: 'Location', value: 'Available worldwide', color: '#A78BFA' },
@@ -244,7 +244,7 @@ export default function Contact() {
                 <span style={{ fontSize: 11, color: 'var(--text2)', fontWeight: 600 }}>5.0</span>
               </div>
               <p style={{ fontSize: 13, color: 'var(--text2)', lineHeight: 1.6, margin: '0 0 12px', fontStyle: 'italic' }}>
-                "VaanTech transformed our vision into reality. Unmatched expertise."
+                "ANVA web solutions transformed our vision into reality. Unmatched expertise."
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                 <div style={{ width: 26, height: 26, borderRadius: '50%', background: 'linear-gradient(135deg, var(--orange), var(--orange2))', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: 11, fontWeight: 700 }}>J</div>
@@ -532,7 +532,7 @@ export default function Contact() {
                             color: '#EF4444',
                           }}
                         >
-                          ⚠️ Something went wrong. Email us at hello@vaantech.com
+                          ⚠️ Something went wrong. Email us at hello@anvawebsolutions.com
                         </motion.div>
                       )}
                     </AnimatePresence>

@@ -199,7 +199,7 @@ export default function About() {
           transition={{ duration: 0.7 }}
           className="ab-header"
         >
-          <div className="pill" style={{ margin: '0 auto 24px' }}>About Vaan Tech</div>
+          <div className="pill" style={{ margin: '0 auto 24px' }}>About ANVA web solutions</div>
           <h2 className="ab-title">
             Your Trusted<br />
             <span className="ab-word-wrap">
